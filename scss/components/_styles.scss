@@ -1,0 +1,29 @@
+* {
+  font-family: $main-font;
+  color: $light-text;
+}
+
+.card {
+  @extend %border-light;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.name {
+  font-family: $display-font;
+  font-size: 20px;
+  color: $display-color;
+}
+
+///// MODAL STYLING
+
+.overlay {
+  background: rgba(100,100,100,0.4);
+}
+
+.modal {
+  @extend %border-light;
+  background-color: rgb(242,242,242);
+}

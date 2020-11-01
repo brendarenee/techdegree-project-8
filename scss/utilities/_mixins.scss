@@ -1,0 +1,30 @@
+@mixin grid-container (
+  $disp: grid,
+  $rows: null,
+  $columns: null,
+  $gap: null,
+) {
+  display: $disp;
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
+  grid-gap: $gap;
+  @content;
+}
+
+@mixin flex-container ($dir) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  @content;
+}
+
+%center-content {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+%border-light {
+  border: $light-text solid 1px;
+  border-radius: 5px;
+}
