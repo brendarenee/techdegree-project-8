@@ -78,3 +78,7 @@ gridContainer.addEventListener('click', e => {
 
   displayModal(index);
 })
+
+modalClose.addEventListener('click', () => {
+  overlay.classList.add("hidden");
+})
