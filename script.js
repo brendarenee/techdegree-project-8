@@ -34,7 +34,7 @@ function displayEmployees(employeeData) {
   });
 
   gridContainer.innerHTML = employeeHTML;
-  return employees;
+
 }
 
 function displayModal (index) {
@@ -62,10 +62,13 @@ function displayModal (index) {
 fetch(urlAPI)
   .then(res => res.json())
   .then(res => res.results)
-  .then(displayEmployees)
+  .then(data => {
+    displayEmployees(data);
+    employees = data;
+  })
   .catch(error => console.log('Sorry. There was an error with retreiving your data.', error))
 
-console.log(employees);
+  console.log(employees);
 
 ///// MODAL CLICK EVENT
 
