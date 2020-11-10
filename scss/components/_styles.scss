@@ -3,8 +3,32 @@
   color: $light-text;
 }
 
+body {
+  // background-color: $bg-color;
+  background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,0.32) 0%, rgba(253,186,45,0.31) 100%);
+}
+
+h1, span {
+  font-family: $display-font;
+  font-size: 48px;
+  letter-spacing: 3px;
+  color: $display-color;
+}
+
+input {
+  @extend %border-light;
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
 .card {
   @extend %border-light;
+  background-color: white;
+  &:hover {
+    @extend %border-hover;
+  }
 }
 
 .avatar {
@@ -13,8 +37,12 @@
 
 .name {
   font-family: $display-font;
-  font-size: 20px;
+  font-size: 25px;
   color: $display-color;
+}
+
+.text-container p {
+  font-size: 16px;
 }
 
 ///// MODAL STYLING
@@ -26,4 +54,21 @@
 .modal {
   @extend %border-light;
   background-color: rgb(242,242,242);
+}
+
+.modal-dir {
+  font-size: 60px;
+  color: $display-color;
+  font-family: $display-font;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-content{
+  .name {
+    font-size: 32px;
+  }
+  p {
+    font-size: 20px;
+  }
 }

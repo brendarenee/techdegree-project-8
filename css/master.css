@@ -1,18 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@300;400&display=swap");
-.grid-container, h1 {
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=DM+Mono:wght@300&family=Open+Sans+Condensed:wght@300&family=Shadows+Into+Light&family=Source+Code+Pro&display=swap");
+.grid-container, header {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.modal, .card {
+.modal, .card, input {
   border: #a4a4a4 solid 1px;
   border-radius: 5px;
 }
 
-h1 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.card:hover {
+  border-color: #282828;
+  box-shadow: 5px 5px 10px grey;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header h1 {
+  text-align: center;
+}
+
+.nobr {
+  white-space: nowrap;
 }
 
 .grid-container {
@@ -20,13 +40,15 @@ h1 {
   grid-template-rows: auto;
   grid-template-columns: 1fr;
   grid-gap: 25px;
+  justify-items: center;
 }
 
 .card {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
+  width: 350px;
 }
 
 .text-container {
@@ -36,7 +58,7 @@ h1 {
 body {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .overlay {
@@ -50,7 +72,7 @@ body {
 
 .modal {
   width: 300px;
-  margin: 15% auto auto;
+  margin: 5% auto auto;
   position: relative;
   text-align: center;
   padding: 30px;
@@ -64,6 +86,19 @@ body {
   cursor: pointer;
 }
 
+.modal-dir {
+  position: absolute;
+  margin: 0;
+  padding: 10px;
+  top: 40%;
+}
+.modal-dir.arrow-left {
+  left: -45px;
+}
+.modal-dir.arrow-right {
+  right: -45px;
+}
+
 .hidden {
   display: none;
 }
@@ -72,25 +107,64 @@ body {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .modal {
+    margin-top: 25%;
+  }
 }
 @media (min-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  header h1 {
+    text-align: left;
+    flex-grow: 1;
+  }
+
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   color: #a4a4a4;
 }
 
+body {
+  background: #22c1c3;
+  background: linear-gradient(0deg, rgba(34, 193, 195, 0.32) 0%, rgba(253, 186, 45, 0.31) 100%);
+}
+
+h1, span {
+  font-family: "Amatic SC", cursive;
+  font-size: 48px;
+  letter-spacing: 3px;
+  color: #282828;
+}
+
+input {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.card {
+  background-color: white;
+}
 .avatar {
   border-radius: 50%;
 }
 
 .name {
-  font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
   color: #282828;
+}
+
+.text-container p {
+  font-size: 16px;
 }
 
 .overlay {
@@ -99,6 +173,21 @@ body {
 
 .modal {
   background-color: #f2f2f2;
+}
+
+.modal-dir {
+  font-size: 60px;
+  color: #282828;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-content .name {
+  font-size: 32px;
+}
+.modal-content p {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=master.css.map */

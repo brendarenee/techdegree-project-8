@@ -1,9 +1,23 @@
 ///// DIRECTORY MAIN PAGE
+* {
+  box-sizing: border-box;
+}
 
-h1 {
+header {
   @extend %center-content;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include flex-container (column) {
+    justify-content: center;
+  };
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.nobr {
+  white-space: nowrap;
 }
 
 .grid-container {
@@ -12,12 +26,14 @@ h1 {
     $rows: auto,
     $gap: 25px
   );
+  justify-items: center;
   @extend %center-content;
 }
 
 .card {
   @include flex-container(row);
-  padding: 20px;
+  padding: 15px;
+  width: 350px;
 }
 
 .text-container {
@@ -29,7 +45,7 @@ h1 {
 body {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .overlay {
@@ -43,7 +59,7 @@ body {
 
 .modal {
   width: 300px;
-  margin: 15% auto auto;
+  margin: 5% auto auto;
   position: relative;
   text-align: center;
   padding: 30px;
@@ -57,6 +73,19 @@ body {
   cursor: pointer;
 }
 
+.modal-dir {
+  position: absolute;
+  margin: 0;
+  padding: 10px;
+  top: 40%;
+  &.arrow-left {
+    left: -45px;
+  }
+  &.arrow-right {
+    right: -45px;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -67,9 +96,23 @@ body {
   .grid-container {
     grid-template-columns: repeat(2, 1fr)
   }
+
+  .modal {
+    margin-top: 25%;
+  }
 }
 
 @media (min-width: $breakpoint-lg) {
+
+  header {
+    @include flex-container (row);
+
+    h1 {
+      text-align: left;
+      flex-grow: 1;
+    }
+  }
+
   .grid-container {
     grid-template-columns: repeat(3, 1fr)
   }

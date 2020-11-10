@@ -2,12 +2,13 @@
   $disp: grid,
   $rows: null,
   $columns: null,
-  $gap: null,
+  $gap: null
 ) {
   display: $disp;
   grid-template-rows: $rows;
   grid-template-columns: $columns;
   grid-gap: $gap;
+  // justify-items: center;
   @content;
 }
 
@@ -27,4 +28,9 @@
 %border-light {
   border: $light-text solid 1px;
   border-radius: 5px;
+}
+
+%border-hover {
+  border-color: $display-color;
+  box-shadow: 5px 5px 10px grey;
 }
