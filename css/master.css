@@ -5,16 +5,6 @@
   margin: 0 auto;
 }
 
-.modal, .card, input {
-  border: #a4a4a4 solid 1px;
-  border-radius: 5px;
-}
-
-.card:hover {
-  border-color: #282828;
-  box-shadow: 5px 5px 10px grey;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -145,14 +135,23 @@ h1, span {
 }
 
 input {
+  border: #a4a4a4 solid 1px;
+  border-radius: 5px;
   width: 200px;
   padding: 5px;
   font-size: 16px;
 }
 
 .card {
+  border: #a4a4a4 solid 1px;
+  border-radius: 5px;
   background-color: white;
 }
+.card:hover {
+  border-color: #282828;
+  box-shadow: 5px 5px 10px grey;
+}
+
 .avatar {
   border-radius: 50%;
 }
@@ -172,6 +171,9 @@ input {
 }
 
 .modal {
+  border: #282828 solid 3px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px grey;
   background-color: #f2f2f2;
 }
 

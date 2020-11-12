@@ -1,12 +1,12 @@
 * {
   font-family: $main-font;
-  color: $light-text;
+  color: $text-light;
 }
 
 body {
   // background-color: $bg-color;
-  background: rgb(34,193,195);
-background: linear-gradient(0deg, rgba(34,193,195,0.32) 0%, rgba(253,186,45,0.31) 100%);
+  background: $bg-gradient-base;
+  background: $bg-gradient;
 }
 
 h1, span {
@@ -17,17 +17,17 @@ h1, span {
 }
 
 input {
-  @extend %border-light;
+  @include box-border($text-light, 1px);
   width: 200px;
   padding: 5px;
   font-size: 16px;
 }
 
 .card {
-  @extend %border-light;
+  @include box-border($text-light, 1px);
   background-color: white;
   &:hover {
-    @extend %border-hover;
+    @include border-shadow($display-color);
   }
 }
 
@@ -52,7 +52,8 @@ input {
 }
 
 .modal {
-  @extend %border-light;
+  @include box-border($display-color, 3px);
+  @include border-shadow;
   background-color: rgb(242,242,242);
 }
 

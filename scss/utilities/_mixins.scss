@@ -19,15 +19,20 @@
   @content;
 }
 
+@mixin box-border ($color, $size){
+  border: $color solid $size;
+  border-radius: 5px;
+}
+
+@mixin border-shadow ($color: null) {
+  border-color: $color;
+  box-shadow: 5px 5px 10px grey;
+}
+
 %center-content {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-%border-light {
-  border: $light-text solid 1px;
-  border-radius: 5px;
 }
 
 %border-hover {

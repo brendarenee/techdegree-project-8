@@ -3,9 +3,12 @@
 $display-font: 'Amatic SC', cursive;
 $main-font: 'Open Sans Condensed', sans-serif;
 
-$bg-color: rgba(220,229,219,0.5);
+$bg-color-light: rgba(220,229,219,0.5);
+$bg-gradient-base: rgb(34,193,195);
+$bg-gradient: linear-gradient(0deg, rgba(34,193,195,0.32) 0%, rgba(253,186,45,0.31) 100%);
 $display-color: rgb(40,40,40);
-$light-text: rgb(164,164,164 );
+
+$text-light: rgb(164,164,164 );
 
 $breakpoint-med: 768px;
 $breakpoint-lg: 1024px;
